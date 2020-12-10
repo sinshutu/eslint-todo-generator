@@ -1,0 +1,8 @@
+{
+  "name": "eslint-todo-generator",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "author": "NaotoSuzuki <suzuki.z2o.naoto@gmail.com>",
+  "license": "MIT",
+  "repository": "git@github.com:sinshutu/eslint-todo-generator.git"
+}
