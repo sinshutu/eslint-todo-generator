@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const program = require("caporal");
+const { main, resetTodo } = require('../dist/index.js');
+
+program
+  .version('0.0.1')
+  .description('Generates an exception list and adds it to your eslintrc')
+  .argument('[files...]', 'target files or dir')
+  .option(
+    '-w --warn',
+    'To do list items are listed as off instead of warnings',
+    program.BOOL,
+    false,
+  )
+  .option(
+    '-f --format',
+    'format: json, yaml',
+    ['json', 'yaml'],
+    'json',
+    true,
+  )
+  .action((args, options) => {
+    resetTodo(options.format);
+    main(
+      args.files,
+      options.format,
+      options.warn ? 'warn' : 'off',
+    ).catch((error) => {
+      process.exitCode = 1;
+      console.error(error);
+    });
+  });
+
+program.parse(process.argv);

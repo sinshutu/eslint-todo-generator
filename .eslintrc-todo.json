@@ -1,0 +1,31 @@
+{
+  "overrides": [
+    {
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
+      },
+      "files": [
+        "src/LintResultTransformer.ts"
+      ]
+    },
+    {
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+      },
+      "files": [
+        "src/Renderer.ts"
+      ]
+    },
+    {
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
+      },
+      "files": [
+        "src/index.ts"
+      ]
+    }
+  ]
+}
