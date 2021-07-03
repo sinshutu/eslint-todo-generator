@@ -1,6 +1,6 @@
 {
   "name": "eslint-todo-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": {
     "eslint-todo-generator": "bin/eslint-todo-generator"
   },

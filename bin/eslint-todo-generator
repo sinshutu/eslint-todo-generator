@@ -4,7 +4,7 @@ const program = require("caporal");
 const { main, resetTodo } = require('../dist/index.js');
 
 program
-  .version('0.0.1')
+  .version('0.0.3')
   .description('Generates an exception list and adds it to your eslintrc')
   .argument('[files...]', 'target files or dir')
   .option(
