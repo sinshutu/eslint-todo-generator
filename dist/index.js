@@ -20,7 +20,7 @@ const Renderer_1 = require("./Renderer");
 function writeTodoFile(format, overrides) {
     return __awaiter(this, void 0, void 0, function* () {
         const outputPath = `.eslintrc-todo.${format === 'json' ? 'json' : 'yml'}`;
-        yield fs_1.default.writeFileSync(outputPath, format === 'json' ? Renderer_1.renderAsJSON({ overrides }) : Renderer_1.renderAsYAML({ overrides }), { encoding: 'utf8' });
+        yield fs_1.default.writeFileSync(outputPath, format === 'json' ? (0, Renderer_1.renderAsJSON)({ overrides }) : (0, Renderer_1.renderAsYAML)({ overrides }), { encoding: 'utf8' });
     });
 }
 function main(files, format, level) {

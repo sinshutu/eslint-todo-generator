@@ -12,9 +12,9 @@ class LintResultTransformer {
         this.originalResults = results;
     }
     generateTodo(warningLevel = 'off') {
-        return map_1.default(this.toGroupByFile, (ruleAggregate) => {
-            const files = [path_1.relative(process.cwd(), ruleAggregate.filePath)];
-            const rules = fromPairs_1.default(ruleAggregate.rules.map((rule) => [rule, warningLevel]));
+        return (0, map_1.default)(this.toGroupByFile, (ruleAggregate) => {
+            const files = [(0, path_1.relative)(process.cwd(), ruleAggregate.filePath)];
+            const rules = (0, fromPairs_1.default)(ruleAggregate.rules.map((rule) => [rule, warningLevel]));
             return {
                 rules,
                 files,
@@ -27,7 +27,7 @@ class LintResultTransformer {
     get toGroupByFile() {
         return this.stripEmptyFiles.map((result) => ({
             filePath: result.filePath,
-            rules: uniq_1.default(result.messages.map((msg) => msg.ruleId)),
+            rules: (0, uniq_1.default)(result.messages.map((msg) => msg.ruleId)),
         }));
     }
 }
