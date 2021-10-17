@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsc -d",
     "lint": "eslint src/",
-    "test:command": "eslint-todo-generator -f json src/**/*"
+    "test:command": "./bin/eslint-todo-generator -f json src/**/*"
   },
   "dependencies": {
     "caporal": "^1.4.0",
